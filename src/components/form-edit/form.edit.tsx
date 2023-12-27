@@ -15,8 +15,8 @@ export function FormEdit() {
 
   const [html, setHtml] = useState(offerItem.description);
 
-  function onChange(e) {
-    setHtml(e.target.value);
+  function onChange(event: SyntheticEvent) {
+    setHtml((event.target as HTMLInputElement).value);
 
     const description = document.getElementById(
       'description'

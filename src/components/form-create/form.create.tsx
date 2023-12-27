@@ -11,8 +11,8 @@ export function FormCreate() {
   const [isCreate, setIsCreate] = useState(false);
   const [html, setHtml] = useState('');
 
-  function onChange(e) {
-    setHtml(e.target.value);
+  function onChange(event: SyntheticEvent) {
+    setHtml((event.target as HTMLInputElement).value);
 
     const description = document.getElementById(
       'description'
