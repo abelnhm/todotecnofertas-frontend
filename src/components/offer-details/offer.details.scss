@@ -1,0 +1,205 @@
+@import '../../vars';
+
+.card-offer-details {
+  min-width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  padding: 2rem;
+
+  .container-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem 2rem;
+    background: white;
+    border-radius: 1rem;
+    max-width: 936px;
+
+    .content-image {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      max-width: 200px;
+    }
+    .content-info {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1rem;
+      font-family: $roboto;
+
+      .content-info-header {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        align-items: center;
+        justify-content: flex-end;
+
+        .buttons-vote {
+          display: none;
+          border: 1px solid $grey-base;
+          padding: 0.2rem;
+          border-radius: 2rem;
+
+          button {
+            background: none;
+            border-radius: 1rem;
+            padding: 0.5rem;
+            height: 2rem;
+            display: flex;
+          }
+
+          .btn-vote-down {
+            color: $grey-base;
+            &:hover {
+              color: $white-base;
+              background: #cecece;
+            }
+          }
+          .status {
+            color: $orange;
+            font-weight: 600;
+          }
+          .btn-vote-up {
+            color: $orange;
+            &:hover {
+              background: #ffddbb;
+            }
+          }
+        }
+        .created-at {
+          color: $grey-base;
+        }
+      }
+      .title {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: $grey-three;
+      }
+      .subtitle {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 0.5rem;
+
+        .offer-price {
+          color: $orange;
+        }
+        .regular-price {
+          color: $grey-base;
+          text-decoration: line-through;
+        }
+        .discount {
+          color: $grey-three;
+        }
+        .brand-store {
+          color: $white-base;
+          background: $grey-three;
+          padding: 0.3rem 1rem;
+          border-radius: 2rem;
+        }
+      }
+      .description {
+        color: $grey-three;
+        font-size: 0.8rem;
+      }
+      .author {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 0.5rem;
+      }
+      .container-buttons {
+        width: 100%;
+
+        .offer-link {
+          gap: 1rem;
+          display: flex;
+          width: 100%;
+          flex-direction: row;
+          justify-content: flex-end;
+
+          a {
+            width: 20rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            padding: 0.5rem 4rem;
+            border-radius: 2rem;
+            color: $white-base;
+            background: $orange;
+            text-decoration: none;
+            gap: 0.5rem;
+
+            &:hover {
+              background: $orange-hover;
+              box-shadow: 0 0 0 1px var($orange-hover);
+            }
+          }
+        }
+        .offer-coupon {
+          display: flex;
+          width: 100%;
+          flex-direction: row;
+          justify-content: flex-end;
+          align-items: center;
+          gap: 1rem;
+
+          .text-coupon {
+            border: 1px solid $grey-base;
+            font-weight: 600;
+            padding: 0.5rem 1rem;
+            border-radius: 2rem;
+            display: flex;
+            align-items: center;
+          }
+        }
+
+        .info-offer-not-login {
+          font-weight: 500;
+          border: 1px solid orange;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 1rem;
+          border-radius: 1rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .card-offer-details {
+    padding: 0.5rem 0.5rem 5rem 0.5rem;
+    flex-direction: column;
+    .container-card {
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+
+      .content-info {
+        width: 100%;
+
+        .container-buttons {
+          .offer-link {
+            flex-direction: column;
+            align-items: center;
+
+            .offer-coupon {
+              display: flex;
+              flex-direction: column;
+            }
+
+            a {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}

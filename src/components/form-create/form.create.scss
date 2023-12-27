@@ -1,0 +1,77 @@
+@import '../../vars';
+.section-create {
+  font-family: $roboto;
+  padding: 2rem 2rem 5rem 2rem;
+
+  .create-card {
+    background: $white-base;
+    border-radius: 1rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+
+      div {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+
+        input,
+        textarea,
+        select {
+          border: 1px solid $grey-base;
+          border-radius: 1rem;
+          padding: 0.5rem;
+        }
+
+        .rsw-editor {
+          .rsw-toolbar {
+            display: flex;
+            flex-direction: row;
+          }
+        }
+
+        input[type='submit'] {
+          margin-top: 1rem;
+          padding: 0.5rem 2rem;
+          background: $orange;
+          border-radius: 2rem;
+          text-decoration: none;
+          color: $white-base;
+          font-family: 'Roboto', sans-serif;
+          font-weight: 600;
+          box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.25);
+          box-sizing: border-box;
+          border: none;
+          &:hover {
+            background: $orange-hover;
+            cursor: pointer;
+          }
+        }
+      }
+
+      .alert-confirm-create {
+        border: 1px solid #b9f5b9;
+        border-radius: 1rem;
+        padding: 1rem;
+        background: #edffed;
+        font-size: 0.8rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+@media (max-width: 525px) {
+  form {
+    width: 100%;
+  }
+}

@@ -1,0 +1,53 @@
+@import '../../vars';
+.error {
+  font-family: $roboto;
+  padding: 1rem 1rem 2rem 1rem;
+
+  .error-card {
+    background: $white-base;
+    border-radius: 1rem;
+    padding: 0rem 0rem 2rem 0rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+
+    .error-image {
+      width: 15rem;
+    }
+    p {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      margin-bottom: 2rem;
+      .title {
+        font-size: 4rem;
+        font-weight: 900;
+      }
+      .message {
+        font-size: 1.5rem;
+      }
+    }
+    .button-back {
+      a {
+        margin-top: 1rem;
+        padding: 0.5rem 2rem;
+        background: $orange;
+        border-radius: 2rem;
+        text-decoration: none;
+        color: $white-base;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 600;
+        box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.25);
+        box-sizing: border-box;
+        border: none;
+        &:hover {
+          background: $orange-hover;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

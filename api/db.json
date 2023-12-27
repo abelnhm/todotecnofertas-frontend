@@ -1,0 +1,11 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "userName": "NameTest",
+      "image": "ImageTest",
+      "createdAt": 1702289006,
+      "updatedAt": 1702289006
+    }
+  ]
+}
