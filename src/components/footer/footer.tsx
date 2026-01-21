@@ -4,7 +4,7 @@ export function Footer() {
   return (
     <footer>
       <p>
-        <span className="footer-brand-name">TodoTechOfertas</span>
+        <span className="footer-brand-name">Todotecnofertas</span>
         <span className="footer-brand-by">by</span>
         <a
           href="https://www.linkedin.com/in/abelnaharro/"

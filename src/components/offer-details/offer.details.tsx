@@ -3,13 +3,11 @@ import './offer.details.scss';
 import { useOffers } from '../../hooks/use.offers';
 import { Offer } from '../../model/offer';
 import { Loading } from '../loading/loading';
-import { useUsers } from '../../hooks/use.users';
 import parse from 'html-react-parser';
 
 export function OfferDetails() {
   const { id } = useParams();
   const { offers } = useOffers();
-  const { loggedUser } = useUsers();
 
   if (offers.length === 0) {
     return <Loading />;
@@ -45,7 +43,7 @@ export function OfferDetails() {
         <section className="card-offer-details" role="contentinfo">
           <div className="container-card">
             <div className="content-image">
-              <img src={offerItem.image.cloudinaryURL} alt="offer image" />
+              <img src={offerItem.image.cloudinaryURL} alt={offerItem.title} />
             </div>
             <div className="content-info">
               <div className="content-info-header">
@@ -78,32 +76,22 @@ export function OfferDetails() {
                 <p>{offerItem.author.userName}</p>
               </div>
               <div className="container-buttons">
-                {loggedUser ? (
-                  <>
-                    <div className="offer-link">
-                      {offerItem.coupon !== '' && (
-                        <div className="offer-coupon">
-                          <span>Coupon:</span>{' '}
-                          <span className="text-coupon">
-                            {offerItem.coupon}
-                          </span>
-                        </div>
-                      )}
-                      <a
-                        href={offerItem.offerURL}
-                        target="_blank"
-                        title="Link offer"
-                      >
-                        Open Offer{' '}
-                        <i className="fa-solid fa-arrow-up-right-from-square"></i>
-                      </a>
+                <div className="offer-link">
+                  {offerItem.coupon !== '' && (
+                    <div className="offer-coupon">
+                      <span>Coupon:</span>{' '}
+                      <span className="text-coupon">{offerItem.coupon}</span>
                     </div>
-                  </>
-                ) : (
-                  <div className="info-offer-not-login">
-                    👉 Sign in to see the offer
-                  </div>
-                )}
+                  )}
+                  <a
+                    href={offerItem.offerURL}
+                    target="_blank"
+                    title="Link offer"
+                  >
+                    Open Offer{' '}
+                    <i className="fa-solid fa-arrow-up-right-from-square"></i>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
