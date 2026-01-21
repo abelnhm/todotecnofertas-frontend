@@ -33,11 +33,14 @@ export function OfferDetails() {
   const cleanHostNameOffer = hostNameOffer.replace('www.', '');
 
   const description = offerItem.description;
+  // if (description.length > 150) {
+  //   description = description.substring(0, 150) + '...';
+  // }
 
   return (
     <>
       {offerItem && (
-        <footer className="card-offer-details">
+        <section className="card-offer-details" role="contentinfo">
           <div className="container-card">
             <div className="content-image">
               <img src={offerItem.image.cloudinaryURL} alt={offerItem.title} />
@@ -92,7 +95,7 @@ export function OfferDetails() {
               </div>
             </div>
           </div>
-        </footer>
+        </section>
       )}
     </>
   );
