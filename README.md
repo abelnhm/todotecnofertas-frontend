@@ -8,13 +8,13 @@ _By Abel Naharro_ 😁👍 <a href="https://www.linkedin.com/in/abelnaharro/" ta
 
 ## 🔗 Links:
 
-<a href="https://sonarcloud.io/summary/overall?id=isdi-coders-2023_Abel-Naharro-Final-Project-front-202309-mad" target="blank">
+<a href="https://sonarcloud.io/project/overview?id=abelnhm_todotecnofertas-frontend" target="blank">
 <img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@10.1.0/icons/sonarcloud.svg" alt="Project information on sonarcloud" height="30" width="40"/>SonarCloud</a>
 
-<a href="https://abel-naharro-final-project-front-202309-mad.vercel.app/" target="blank">
-<img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@10.1.0/icons/vercel.svg" alt="Project link of Vercel" height="30" width="40"/>Vercel Project</a>
+<a href="https://todotecnofertas.linkinghook.com/" target="blank">
+<img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@10.1.0/icons/vercel.svg" alt="Project link of Vercel" height="30" width="40"/>Demo Project</a>
 
-<a href="https://github.com/isdi-coders-2023/Abel-Naharro-Final-Project-back-202309-mad" target="blank">
+<a href="https://github.com/abelnhm/todotecnofertas-backend" target="blank">
 <img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@10.1.0/icons/github.svg" alt="Project link of Vercel" height="30" width="40"/>Backend Project</a>
 
 ## 🛠️ Built With
@@ -33,8 +33,8 @@ _By Abel Naharro_ 😁👍 <a href="https://www.linkedin.com/in/abelnaharro/" ta
 Clone repo
 
 ```sh
-git clone https://github.com/isdi-coders-2023/Abel-Naharro-Final-Project-front-202309-mad
-cd Abel-Naharro-Final-Project-front-202309-mad
+git clone https://github.com/abelnhm/todotecnofertas-frontend.git
+cd todotecnofertas-frontend
 ```
 
 Install dependencies
