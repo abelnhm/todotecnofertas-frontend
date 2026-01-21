@@ -3,13 +3,11 @@ import './offer.details.scss';
 import { useOffers } from '../../hooks/use.offers';
 import { Offer } from '../../model/offer';
 import { Loading } from '../loading/loading';
-import { useUsers } from '../../hooks/use.users';
 import parse from 'html-react-parser';
 
 export function OfferDetails() {
   const { id } = useParams();
   const { offers } = useOffers();
-  const { loggedUser } = useUsers();
 
   if (offers.length === 0) {
     return <Loading />;
@@ -35,17 +33,14 @@ export function OfferDetails() {
   const cleanHostNameOffer = hostNameOffer.replace('www.', '');
 
   const description = offerItem.description;
-  // if (description.length > 150) {
-  //   description = description.substring(0, 150) + '...';
-  // }
 
   return (
     <>
       {offerItem && (
-        <section className="card-offer-details" role="contentinfo">
+        <footer className="card-offer-details">
           <div className="container-card">
             <div className="content-image">
-              <img src={offerItem.image.cloudinaryURL} alt="offer image" />
+              <img src={offerItem.image.cloudinaryURL} alt={offerItem.title} />
             </div>
             <div className="content-info">
               <div className="content-info-header">
@@ -97,7 +92,7 @@ export function OfferDetails() {
               </div>
             </div>
           </div>
-        </section>
+        </footer>
       )}
     </>
   );
