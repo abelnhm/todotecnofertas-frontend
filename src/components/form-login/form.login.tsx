@@ -12,7 +12,7 @@ export function FormLogin() {
     if (loggedUser) {
       navigate('/');
     }
-  }, [loggedUser, navigate]);
+  }, [loggedUser]);
 
   const handleSubmit = (event: SyntheticEvent) => {
     event.preventDefault();
